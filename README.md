@@ -1,15 +1,19 @@
-# Arbitrum Nitro Rollup Contracts
+# Arbitrum Nitro Rollup Contracts - Orbit Avail Kaushik Chain
 
-This is the package with the smart contract code that powers Arbitrum Nitro.
+ 
+This package contains the smart contract code that powers Arbitrum Nitro and is customized for the Orbit Avail Kaushik Chain using Avail Data Availability (DA) and Arbitrum Orbit from scratch. The rollup operates with a Chain ID of 13339999.
+
 It includes the rollup and fraud proof smart contracts, as well as interfaces for interacting with precompiles.
 
-For more information see https://developer.arbitrum.io/intro
+For more information, visit the Arbitrum Developer Docs.
 
-For the deployed addresses of these contracts for Arbitrum chains see https://developer.arbitrum.io/useful-addresses
+For the deployed addresses of these contracts for Arbitrum chains, see Useful Addresses.
 
-For the token bridge contracts see https://github.com/OffchainLabs/token-bridge-contracts
+For the token bridge contracts, see Token Bridge Contracts.
 
-Compile these contracts locally by running
+## Setup Instructions
+
+To compile and build these contracts locally, follow these steps:
 
 ```bash
 git clone https://github.com/offchainlabs/nitro-contracts
@@ -17,6 +21,18 @@ cd nitro-contracts
 yarn install
 yarn build
 ```
+
+## Additional Steps for Orbit Avail Kaushik Chain
+
+1. Download avail-nitro-node Docker Image
+To set up the data availability layer with Avail, download the avail-nitro-node image:
+
+```bash
+docker pull availj/avail-nitro-node:v2.1.0-upstream-v3.1.1
+
+```
+2. Add Docker Image in the Dockerfile
+Integrate this Docker image in your Dockerfile to enable the use of Avail for data availability with Arbitrum Nitro.
 
 ## License
 
